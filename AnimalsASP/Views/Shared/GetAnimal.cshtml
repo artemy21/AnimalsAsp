@@ -1,0 +1,45 @@
+﻿@model AnimalsASP.AnimalViewModel
+
+@{
+	ViewBag.Title = Model.Animal?.Name;
+}
+
+<div id="animalPageDiv">
+	<div id="animalDetailsDiv">
+		<div id="nameDescDiv">
+			<h1 class="nameH1">@Model.Animal?.Name</h1>
+			<p class="descP">@Model.Animal?.Description</p>
+			<form asp-controller="Admin" asp-action="DeleteAnimal">
+				<input name="animalId" type="hidden" value=@Model.Animal!.Id>
+				<button type="submit">Delete</button>
+			</form>
+			<form asp-controller="Admin" asp-action="EditAnimal">
+				<input name="animalId" type="hidden" value=@Model.Animal!.Id>
+				<button type="submit">Edit</button>
+			</form>
+		</div>
+		<div id="imgDiv">
+			<img id="img" src=@Model.Animal?.ImageUrl />
+		</div>
+	</div>
+	<div id="commentSection">
+		<div id="commentsDiv">
+			@if (Model.Animal!.Comments != null)
+			{
+				@foreach (var comment in Model.Animal!.Comments)
+				{
+					<div class="commentText">
+						@comment.Content
+					</div>
+				}
+			}
+		</div>
+		<div id="addCommentDiv">
+			<form method="post">
+				<input name="animalId" type="hidden" value="@Model.Animal.Id" />
+				<textarea name="comment" placeholder="type comment" id="commentBox"></textarea>
+				<button id="commentBtn" type="submit">Post Comment</button>
+			</form>
+		</div>
+	</div>
+</div>

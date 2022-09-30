@@ -1,0 +1,31 @@
+﻿@model IEnumerable<LibCore.Models.Animal>
+
+@{
+	ViewBag.Title = "Catalog";
+}
+
+
+<div class="bodyDiv">
+	<h1>Catalog</h1>
+
+	<select asp-items="ViewBag.Categories" onchange="redirect(this.value)" class="catalogSelect">
+		<option value="0">All Categories</option>
+	</select>
+
+	<div class="cards">
+		@foreach (var animal in Model)
+		{
+			<div class="card">
+				@await Html.PartialAsync("Components/_AnimalView", animal)
+			</div>
+		}
+	</div>
+</div>
+
+<script>
+	function redirect(dropDownValue) {
+		window.location.href = '@Url.Action("GetCatalog")/' + '?categoryId=' + dropDownValue;
+	}
+</script>
+
+

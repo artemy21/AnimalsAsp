@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "zUZSOIYWl3TZj14VKKQhu3UNKpbBJ9Ih68hYxl6I4PLaYk3cnO1B9hl8/yRxs3iB9RsLlIbttYAtsSUvy/SdUg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Gamer\\source\\repos\\AnimalsProject\\LibApplication\\LibApplication.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Gamer\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\Gamer\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}

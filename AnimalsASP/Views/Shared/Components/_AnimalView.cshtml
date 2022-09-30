@@ -1,0 +1,7 @@
+﻿@model LibCore.Models.Animal
+
+<h2 class="card-title">@Model.Name</h2>
+<a asp-action="GetAnimal" asp-route-animalId=@Model.Id>
+	<img src=@Model.ImageUrl />
+</a>
+

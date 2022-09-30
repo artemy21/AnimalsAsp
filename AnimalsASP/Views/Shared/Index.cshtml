@@ -1,0 +1,17 @@
+﻿@model IEnumerable<LibCore.Models.Animal>
+
+@{
+	ViewBag.Title = "Index";
+}
+
+<h1>Home page</h1>
+<h2 class="white">Trending animals</h2>
+
+<div class="cards">
+	@foreach (var animal in Model)
+	{
+		<div class="card">
+			@await Html.PartialAsync("Components/_AnimalView", animal)
+		</div>
+	}
+</div>

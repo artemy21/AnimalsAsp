@@ -1,0 +1,52 @@
+﻿@model LibApplication.Commands.CreateAnimalCommand
+
+@{
+	ViewBag.Title = "Create Animal";
+}
+
+<link rel="stylesheet" href="/css/FormStyle.css">
+
+<div class="contact1">
+	<div class="container-contact1">
+		<form class="contact1-form" asp-action="CreateAnimal">
+			<span class="contact1-form-title">
+				Add new animal
+			</span>
+
+			<div class="wrap-input1">
+				<input asp-for="Name" class="input1" type="text" placeholder="Name" required>
+				<span class="shadow-input1"></span>
+			</div>
+
+			<div class="wrap-input1">
+				<select asp-items="ViewBag.Categories" class="input2" asp-for="CategoryId" required>
+					<option value="" disabled selected>Animal Category</option>
+				</select>
+			</div>
+
+			<div class="wrap-input1">
+				<input asp-for="ImageUrl" id="inputURL" onchange="updateUrl()" class="input1" type="url" placeholder="Image URL" required>
+				<span class="shadow-input1"></span>
+			</div>
+
+			<div class="wrap-input1">
+				<textarea asp-for="Description" class="input1" placeholder="Description" required></textarea>
+				<span class="shadow-input1"></span>
+			</div>
+
+			<div class="container-contact1-form-btn">
+				<button class="contact1-form-btn" type="submit">
+					<span>
+						Add animal
+					</span>
+				</button>
+			</div>
+		</form>
+
+		<div class="contact1-pic js-tilt" data-tilt>
+			<img id="displayURL">
+		</div>
+	</div>
+</div>
+
+<script src="/JS/ImageScript.js"></script>

@@ -1,0 +1,140 @@
+﻿* {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #34495e;
+}
+
+h1, label {
+    color: white;
+}
+
+.white {
+    color: white;
+}
+
+#animalPageDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#animalDetailsDiv {
+    width: 1400px;
+    height: 800px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: start;
+    margin: 3rem;
+}
+
+#nameDescDiv {
+    margin: 3rem;
+}
+
+#imgDiv {
+    margin: 3rem;
+}
+
+#img {
+    border-radius: 10px;
+    width: 600px;
+    height: 700px;
+}
+
+#commentsDiv {
+    height: 570px;
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    margin: 3rem;
+    margin-left: 0rem;
+}
+
+.commentText {
+    font-size: 20px;
+    padding: 1.5rem;
+    border-bottom: 1px solid #34495e;
+    width: 100%;
+}
+
+.nameH1 {
+    color: #34495e;
+}
+
+.descP {
+    color: #34495e;
+}
+
+#commentSection {
+    display: flex;
+    flex-direction: column;
+}
+
+#addCommentDiv {
+    height: 200px;
+    width: 450px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 3rem;
+    margin-left: 0rem;
+    margin-top: 0rem;
+}
+
+#commentBox {
+    resize: none;
+    width: 450px;
+    height: 160px;
+}
+
+#commentBtn {
+    height: 40px;
+    width: 450px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.notFoundh1 {
+    margin-top: 240px;
+    font-size: 60px;
+}
+
+.notFounda {
+    font-size: 60px;
+    color: white;
+    background-color: deepskyblue;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.searchBtn {
+    height: 34px;
+    width: max-content;
+    position: sticky;
+}
+
+.catalogSelect {
+    display: block;
+    width: 200px;
+    background: #e6e6e6;
+    font-size: 25px;
+    text-align: center;
+    line-height: 1.5;
+    color: #666666;
+    border-radius: 25px;
+    height: 50px;
+}

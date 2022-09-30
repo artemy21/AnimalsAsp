@@ -1,0 +1,60 @@
+﻿@model LibCore.Models.Animal
+
+@{
+	ViewBag.Title = "Edit Animal";
+}
+
+<link rel="stylesheet" href="/css/FormStyle.css">
+
+<div class="contact1">
+	<div class="container-contact1">
+		<form class="contact1-form" asp-action="SubmitEditAnimal">
+			<span class="contact1-form-title">
+				Edit animal
+			</span>
+
+			<input type="hidden" asp-for="Id" value="@Model.Id">
+			<input type="hidden" asp-for="Comments" value="@Model.Comments">
+
+			<div class="wrap-input1">
+				<input asp-for="Name" class="input1" type="text" placeholder="Name" value=@Model.Name required>
+				<span class="shadow-input1"></span>
+			</div>
+
+			<div class="wrap-input1">
+				<select asp-items="ViewBag.Categories" class="input2" asp-for="CategoryId" required>
+				</select>
+			</div>
+
+			<div class="wrap-input1">
+				<input asp-for="ImageUrl"
+					   id="inputURL"
+					   onchange="updateUrl()"
+					   class="input1" type="url"
+					   placeholder="Image URL"
+					   value=@Model.ImageUrl
+					   required>
+				<span class="shadow-input1"></span>
+			</div>
+
+			<div class="wrap-input1">
+				<textarea asp-for="Description" class="input1" placeholder="Description" required>@Model.Description</textarea>
+				<span class="shadow-input1"></span>
+			</div>
+
+			<div class="container-contact1-form-btn">
+				<button class="contact1-form-btn" type="submit">
+					<span>
+						Update animal
+					</span>
+				</button>
+			</div>
+		</form>
+
+		<div class="contact1-pic js-tilt" data-tilt>
+			<img id="displayURL">
+		</div>
+	</div>
+</div>
+
+<script src="/JS/ImageScript.js"></script>
